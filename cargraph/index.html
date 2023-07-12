@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Car Selector</title>
+</head>
+<body>
+    <h1>Select a car:</h1>
+    <form action="/display" method="POST">
+        <select name="car">
+            {% for car in car_list %}
+                <option value="{{ car }}">{{ car }}</option>
+            {% endfor %}
+        </select>
+        <br><br>
+        <input type="submit" value="Display">
+    </form>
+</body>
+</html>
